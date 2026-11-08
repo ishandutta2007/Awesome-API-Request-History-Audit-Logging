@@ -1,0 +1,231 @@
+<svg fill="none" viewBox="0 0 1200 420" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glow-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.6" />
+    </linearGradient>
+
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.25" />
+    </pattern>
+
+    <radialGradient id="orb-blue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orb-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="blur-glow">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+
+    <filter id="pill-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 44px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        fill: #ffffff;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        fill: #e2e8f0;
+      }
+      .log-code {
+        font-family: "SF Mono", Monaco, Menlo, Consolas, monospace;
+        font-size: 12px;
+        fill: #38bdf8;
+      }
+      .badge-label {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        fill: #38bdf8;
+      }
+
+      /* Animated dynamic background elements */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-16px) scale(1.05); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(14px) scale(0.96); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.65; }
+      }
+      @keyframes streamData {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes rotateSlow {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .floating-orb-1 { animation: floatSlow 8s ease-in-out infinite; }
+      .floating-orb-2 { animation: floatReverse 10s ease-in-out infinite; }
+      .pulsing-glow { animation: pulseGlow 4s ease-in-out infinite; }
+      .streaming-path {
+        stroke-dasharray: 12, 12;
+        animation: streamData 12s linear infinite;
+      }
+      .stream-fast {
+        stroke-dasharray: 8, 8;
+        animation: streamData 6s linear infinite;
+      }
+      .rotating-compass {
+        transform-origin: 1060px 100px;
+        animation: rotateSlow 24s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Animated ambient glowing orbs in background -->
+  <g filter="url(#blur-glow)">
+    <circle class="floating-orb-1 pulsing-glow" cx="220" cy="110" r="140" fill="url(#orb-blue)" />
+    <circle class="floating-orb-2 pulsing-glow" cx="980" cy="280" r="160" fill="url(#orb-purple)" />
+  </g>
+
+  <!-- Geometric Grid Layer -->
+  <rect width="1200" height="420" rx="16" fill="url(#grid-pattern)" />
+
+  <!-- Background Animated Data Stream Waves (Behind Content) -->
+  <g opacity="0.35">
+    <path class="streaming-path" d="M -50 320 C 250 240, 450 380, 750 300 C 950 250, 1100 350, 1250 310" stroke="#38bdf8" stroke-width="2.5" fill="none" />
+    <path class="stream-fast" d="M -50 350 C 200 390, 500 280, 800 340 C 1000 380, 1150 290, 1250 330" stroke="#a855f7" stroke-width="2" fill="none" />
+    <path class="streaming-path" d="M -50 90 C 300 40, 600 130, 900 70 C 1050 40, 1150 90, 1250 80" stroke="#818cf8" stroke-width="1.5" fill="none" />
+  </g>
+
+  <!-- Futuristic Corner Technical Markers -->
+  <g opacity="0.4">
+    <path d="M 30 50 L 30 30 L 50 30" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <path d="M 1170 50 L 1170 30 L 1150 30" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <path d="M 30 370 L 30 390 L 50 390" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <path d="M 1170 370 L 1170 390 L 1150 390" stroke="#38bdf8" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Technical Ring Accent (Background Right) -->
+  <g class="rotating-compass" opacity="0.25">
+    <circle cx="1060" cy="100" r="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="8, 6" fill="none" />
+    <circle cx="1060" cy="100" r="45" stroke="#a855f7" stroke-width="1" stroke-dasharray="4, 4" fill="none" />
+    <circle cx="1060" cy="100" r="4" fill="#38bdf8" />
+  </g>
+
+  <!-- Foreground Content Block -->
+  <g transform="translate(60, 0)">
+    
+    <!-- Top Category Tag -->
+    <g transform="translate(0, 56)">
+      <rect width="215" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <circle cx="16" cy="14" r="5" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="30" y="18" class="badge-label">CURATED ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title with Gradient fill -->
+    <text x="0" y="132" class="title-text">
+      API Request History &amp; <tspan fill="url(#accent-cyan)">Audit Logging</tspan>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="172" class="subtitle-text">
+      Enterprise Observability &bull; Compliance Trails &bull; Open-Source &amp; Cloud Telemetry
+    </text>
+
+    <!-- Interactive / Dynamic Status Card Mockup -->
+    <g transform="translate(0, 208)">
+      <!-- Main Container Card -->
+      <rect width="1080" height="96" rx="12" fill="url(#glow-card)" stroke="#334155" stroke-width="1.2" filter="url(#pill-shadow)" />
+
+      <!-- Left Live Telemetry Stream Indicator -->
+      <g transform="translate(24, 22)">
+        <circle cx="8" cy="8" r="6" fill="#10b981">
+          <animate attributeName="r" values="5;7;5" dur="2.4s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="1;0.6;1" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+        <text x="24" y="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#10b981" letter-spacing="0.5">EVENT STREAM INGESTION</text>
+        <text x="24" y="38" class="log-code">POST /v1/audit/events 201 Created &bull; latency: 1.4ms &bull; signature: ed25519_verified</text>
+        <text x="24" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">Compliant with SOC2, GDPR, HIPAA, and PCI-DSS immutability requirements</text>
+      </g>
+
+      <!-- Right Side Metrics Pill Group -->
+      <g transform="translate(820, 22)">
+        <rect width="230" height="52" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+        <text x="16" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">EST. GLOBAL MARKET</text>
+        <text x="16" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#38bdf8">$4.1B &rarr; $10B+</text>
+      </g>
+    </g>
+
+    <!-- Feature Tags / Pills -->
+    <g transform="translate(0, 332)">
+      <!-- Pill 1: Audit Trails -->
+      <g transform="translate(0, 0)">
+        <rect width="180" height="36" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="23" text-anchor="middle" class="pill-text">&#x1F6E1;&#xFE0F; Immutable Audit Logs</text>
+      </g>
+
+      <!-- Pill 2: Open Source -->
+      <g transform="translate(192, 0)">
+        <rect width="190" height="36" rx="18" fill="#1e293b" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="95" y="23" text-anchor="middle" class="pill-text">&#x26A1; High-Throughput OTel</text>
+      </g>
+
+      <!-- Pill 3: Distributed Tracing -->
+      <g transform="translate(394, 0)">
+        <rect width="180" height="36" rx="18" fill="#1e293b" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="23" text-anchor="middle" class="pill-text">&#x1F50D; Distributed Tracing</text>
+      </g>
+
+      <!-- Pill 4: Hot/Cold Storage -->
+      <g transform="translate(586, 0)">
+        <rect width="180" height="36" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="23" text-anchor="middle" class="pill-text">&#x1F4BE; S3 &amp; Object Retention</text>
+      </g>
+
+      <!-- Pill 5: Real-time Analytics -->
+      <g transform="translate(778, 0)">
+        <rect width="180" height="36" rx="18" fill="#1e293b" stroke="#34d399" stroke-opacity="0.4" stroke-width="1" />
+        <text x="90" y="23" text-anchor="middle" class="pill-text">&#x1F4C8; Real-time Dashboards</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
