@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-API-Request-History-Audit-Logging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-API-Request-History-Audit-Logging?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-API-Request-History-Audit-Logging/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-API-Request-History-Audit-Logging?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-API-Request-History-Audit-Logging/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-API-Request-History-Audit-Logging?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-API-Request-History-Audit-Logging/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-API-Request-History-Audit-Logging?style=flat-square&color=blue" alt="Open Issues" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-API-Request-History-Audit-Logging/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-API-Request-History-Audit-Logging?style=flat-square&color=green" alt="License" /></a>
@@ -67,7 +67,7 @@ For engineering teams prioritizing data sovereignty, local compliance, or privat
 
 The list is sorted in descending order by GitHub stargazers count:
 
-| Project & Repo Link | ⭐ Stars | 📜 License | 💡 Architecture & Use Case |
+| Project & Repo Link | ⭐ GitHub_Stars | 📜 License | 💡 Architecture & Use Case |
 |---|---|---|---|
 | [**SigNoz**](https://github.com/SigNoz/signoz) <a href="https://github.com/SigNoz/signoz/stargazers"><img src="https://img.shields.io/github/stars/SigNoz/signoz?style=social&color=white" alt="SigNoz Stars" /></a> | ~32,500+ | Apache 2.0 / MIT | Full-stack OpenTelemetry-native APM and observability suite powered by ClickHouse columnar storage for blazing-fast API log aggregation and trace correlation. |
 | [**Grafana Loki**](https://github.com/grafana/loki) <a href="https://github.com/grafana/loki/stargazers"><img src="https://img.shields.io/github/stars/grafana/loki?style=social&color=white" alt="Grafana Loki Stars" /></a> | ~29,100+ | AGPL 3.0 | Horizontally scalable, multi-tenant log aggregation engine inspired by Prometheus; indexes only metadata labels to drastically reduce storage footprint. |
@@ -114,3 +114,12 @@ Thank you so much for visiting this repository! If you found this curated list h
 ## 📄 License
 
 This repository is distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-API-Request-History-Audit-Logging&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-API-Request-History-Audit-Logging_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-API-Request-History-Audit-Logging_growth.svg">
+  </picture>
+</a>
